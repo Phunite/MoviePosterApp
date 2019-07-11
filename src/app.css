@@ -1,0 +1,39 @@
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+.PostContainer{
+    display:grid;
+    background: rgb(231, 231, 243);
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1em;
+    padding-top:15px;
+
+}
+
+/*headers*/
+
+.headerStyle{
+  background-color:black;
+  font-size:1em;
+  text-align:center;
+  color:white;
+  width:"100%";
+  min-width:300px;
+  height:100%;
+}
+.pagination li{
+  font-size: 2em;
+  display: inline;
+  list-style-type: none;
+  padding:0.75em;
+  cursor: pointer;
+}
+
+
+.searchBar{
+  padding:0 5em;
+
+}
