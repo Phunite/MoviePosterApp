@@ -15,6 +15,8 @@ class SearchBar extends Component {
       }
       onTextChange = e => {
         this.setState({[e.target.name]:e.target.value});
+        //Uncomment for dynamicc searching
+        /* this.props.getSearchText(this.state.searchText); */
 
     }
     render() { 

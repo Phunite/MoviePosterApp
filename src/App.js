@@ -12,9 +12,10 @@ class App extends Component {
 state = {  
   items:[],
   page:1,
+  posters:[],
   apiUrl:"https://api.themoviedb.org/3/",
   apiKey:"fabfadfecd6dcd34f26a4142545c1a29",
-  query:"https://api.themoviedb.org/3/discover/movie?api_key=fabfadfecd6dcd34f26a4142545c1a29&page=3",
+  query:"https://api.themoviedb.org/3/discover/movie?api_key=fabfadfecd6dcd34f26a4142545c1a29&page=1",
   language:"language=en-US",
   searchMode:"search/movie",
   searchText:"",
@@ -41,9 +42,7 @@ componentDidMount(){
 }
 
 getSearchText=(text)=>{
-
 const query=this.state.apiUrl+this.state.searchMode+"?api_key="+this.state.apiKey+"&"+this.state.language+"&page="+this.state.page+"&query="+text;
-console.log(query);
 fetch(query)
   .then(res=>res.json())
   .then(json=>{
@@ -55,9 +54,13 @@ fetch(query)
   render() {
 
   //deconstruring the array to get the properties I need.
-  const {items}=this.state; 
-  const posters=items.map(({id, poster_path,title})=>({id,poster_path,title}));
-
+ 
+    const {items}=this.state; 
+    let posters=items.map(({id, poster_path,title})=>({id,poster_path,title}));
+    //uncomment for dynamica searching
+     /* if(items!=null){
+       posters=items.map(({id, poster_path,title})=>({id,poster_path,title}));
+     } */
     return (  
       <MuiThemeProvider>
         <div>
