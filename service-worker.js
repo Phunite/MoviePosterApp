@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/PhuzionMeep/MoviePosterApp/precache-manifest.7ab20247248f55c2d115a3eadc6973e3.js"
+  "/PhuzionMeep/MoviePosterApp/precache-manifest.8120700f8ababb57ca1fac2db61befcb.js"
 );
 
 self.addEventListener('message', (event) => {
